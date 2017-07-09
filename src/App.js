@@ -20,7 +20,7 @@ class App extends Component {
     return(
       <Banner
         title="Access MPConnect through your Shopify Store"
-        action={{content: 'Continue', url: 'https://'+shop+'.myshopify.com/admin/oauth/authorize?client_id='+api_key+'&scope='+scopes+'&redirect_uri='+redirect_uri+'&state='+nonce+'&grant_options[]='}}
+        action={{content: 'Continue', url: 'http://localhost:5000/access/store?name='+shop}}
         status="info"
         icon={{ Logo }}
         onDismiss={()=>{}}
