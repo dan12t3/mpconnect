@@ -1,25 +1,39 @@
-import React from 'react';
-import '@shopify/polaris/styles.css';
-import { CalloutCard } from '@shopify/polaris';
+import React, { Component } from 'react';
+import { Layout, Card, FormLayout, TextField, CalloutCard, Banner } from '@shopify/polaris';
+import Logo from './logo.svg';
 
 
 // make Component
 
-const App = () => {
-  return(
-    <CalloutCard
-      title="Customize the style of your checkout"
-      illustration="https://cdn.shopify.com/s/assets/admin/checkout/settings-customizecart-705f57c725ac05be5a34ec20c05b94298cb8afd10aac7bd9c7ad02030f48cfa0.svg"
-      primaryAction={{
-        content: 'Customize checkout',
-        url: 'https://www.shopify.com',
-      }}
-    >
-      <p>Upload your store’s logo, change colors and fonts, and more.</p>
-    </CalloutCard>
+class App extends Component {
+  state = { storeURL: '' };
 
-  );
+
+  render(){
+
+    var shop = this.state.storeURL;
+    const api_key = "84f3302b4c6a4c2f3ce6fd4aad2ff99c";
+    const scopes = "read_reports,read_products,read_orders";
+    const redirect_uri = "https://mp-connect.herokuapp.com/";
+    const nonce = "123";
+
+    return(
+      <Banner
+        title="Access MPConnect through your Shopify Store"
+        action={{content: 'Continue', url: 'https://'+shop+'.myshopify.com/admin/oauth/authorize?client_id='+api_key+'&scope='+scopes+'&redirect_uri='+redirect_uri+'&state='+nonce+'&grant_options[]='}}
+        status="info"
+        icon={{ Logo }}
+        onDismiss={()=>{}}
+      >
+      <br />
+        <TextField placeholder="Store URL" value={this.state.storeURL} onChange={(newValue) => this.setState({storeURL: newValue})}/>
+      </Banner>
+
+    );
+
+  }
 }
+
 
 
 /*
