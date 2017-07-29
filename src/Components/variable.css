@@ -1,0 +1,8 @@
+:root{
+  --nav-height: 80px;
+  --nav-width: 80px;
+  --nav-background: #5A5A5A;
+  --nav-background-hover: #3E3E3E;
+  --brand-color: #CC5555;
+  --nav-menu-height: var(--nav-height);
+}

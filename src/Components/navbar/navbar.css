@@ -1,12 +1,4 @@
 
-:root{
-  --nav-height: 80px;
-  --nav-width: 80px;
-  --nav-background: #5A5A5A;
-  --nav-background-hover: #3E3E3E;
-  --brand-color: #CC5555;
-  --nav-menu-height: var(--nav-height);
-}
 .SideNav{
   background-color: var(--nav-background);
   height: 100%;
@@ -32,17 +24,18 @@
   bottom: 0;
 }
 
-.SideNav a:hover, .SideNav .NavFoot label:hover{
+.SideNav a:hover, .SideNav .active{
   background-color: var(--nav-background-hover);
 }
 
-.SideNav a img{
+.SideNav a img, .SideNav a object{
   width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 .SideNav .NavFoot > a{
   z-index: 1;

@@ -1,18 +1,24 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 import './navbar.css';
-import Home from './icons/home.svg';
+import Search from './icons/search.svg';
 import Message from './icons/message.svg';
 import User from './icons/user.svg';
 import Settings from './icons/settings.svg';
-import DropDown from './icons/drop-down3.svg';
+import DropDown from './icons/drop-down.svg';
 
 const Navbar = () => {
   return(
     <div className="SideNav">
-      <a className="Brand" href="#"></a>
-      <a href="#"><img src={Home} /></a>
-      <a href="#"><img src={Message} /></a>
-      <a href="#"><img src={User} /></a>
+      <NavLink to="/store" className="Brand" ></NavLink>
+      <NavLink to="/store/search" activeClassName="active">
+
+      <img alt="search-icon" src={Search} />
+
+      </NavLink>
+      <NavLink to="/store/messages" activeClassName="active"><img alt="message-icon" src={Message} /></NavLink>
+      <NavLink to="/store/partners" activeClassName="active"><img alt="partners-icon" src={User} /></NavLink>
 
 
         <label className="NavFoot">
@@ -21,10 +27,10 @@ const Navbar = () => {
             var collapse = document.getElementById('collapse');
             collapse.focus();
 
-          }}><img src={DropDown} /></a>
+          }}><img alt="dropdown-icon" src={DropDown} /></a>
           <div className="FootBody">
-            <a href="#"><img src={User} /></a>
-            <a href="#"><img src={Settings} /></a>
+            <NavLink to="/store/profile" activeClassName="active"><img alt="profile-icon" src={User} /></NavLink>
+            <NavLink to="/store/settings" activeClassName="active"><img alt="settings-icon"src={Settings} /></NavLink>
           </div>
 
         </label>
