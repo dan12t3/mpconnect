@@ -1,5 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
+import config from '../../config';
+import Cookie from 'universal-cookie';
 
-const profile = () => (<p>profile</p>)
+class Profile extends Component{
 
-export default profile;
+  componentWillMount(){
+    //fetch request to db
+    const cookie = new Cookie();
+    const options ={
+      method: 'GET',
+      headers: {
+        'token' : cookie.get('token'),
+        'Content-Type': 'application/json'
+      }
+    }
+    fetch(config.backend+'/profile/fetch',options).then((res) => {
+      res.json();
+    }).then((myJson) => {
+      console.log(myJson);
+    })
+
+
+  }
+
+  render(){
+    return(<p>Profile</p>);
+  }
+}
+
+
+
+export default Profile;
