@@ -1,6 +1,7 @@
 //imports
 import React, { Component } from 'react';
 import { TextField, Banner } from '@shopify/polaris';
+import '@shopify/polaris/styles.css';
 
 
 //structure
