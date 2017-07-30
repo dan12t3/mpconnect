@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import '../../Components/variable.css';
+import { parse } from 'querystring';
 
 import Navbar from '../../Components/navbar/navbar';
 import Page from '../../Components/page/page';
@@ -13,7 +14,15 @@ import Profile from './profile';
 import Settings from './settings';
 
 
-const App = () => {
+
+const App = ({ location }) => {
+
+  const query = parse(location.search.substr(1));
+  console.log(query);
+
+  //store in cookie
+
+
   return(
     <div>
     <Navbar />

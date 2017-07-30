@@ -17,7 +17,7 @@ class banner extends Component{
     return(
       <Banner
         title="Access MPConnect through your Shopify Store"
-        action={{content: 'Continue', url: 'https://mpconnect-backend.herokuapp.com/auth/access?shop='+shop}}
+        action={{content: 'Continue', url: 'http://localhost:5000/auth/access?shop='+shop}}
         status="info"
         onDismiss={()=>{}}
       >
