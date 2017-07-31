@@ -7,6 +7,7 @@ class Profile extends Component{
   componentWillMount(){
     //fetch request to db
     const cookie = new Cookie();
+    console.log(cookie.get('connect.sid'));
     const options ={
       method: 'GET',
       headers: {
