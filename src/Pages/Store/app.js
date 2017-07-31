@@ -19,13 +19,12 @@ import Settings from './settings';
 const App = ({ location }) => {
 
   const query = parse(location.search.substr(1));
-  console.log(query);
   const cookie = new Cookie();
   if(typeof query.token !== 'undefined'){
     cookie.set('token', query.token, {});
   }
 
-  console.log(cookie.get('token'));
+  console.log('token: '+cookie.get('token'));
 
   // confirm that token exists, if not do something
     //redirect to login page maybe or homepage - i need the name for that though

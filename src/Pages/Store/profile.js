@@ -7,18 +7,24 @@ class Profile extends Component{
   componentWillMount(){
     //fetch request to db
     const cookie = new Cookie();
-    console.log(cookie.get('connect.sid'));
+
     const options ={
+      credentials: 'include',
       method: 'GET',
       headers: {
         'token' : cookie.get('token'),
         'Content-Type': 'application/json'
-      }
+      },
+      mode: 'cors'
     }
     fetch(config.backend+'/profile/fetch',options).then((res) => {
-      res.json();
+      console.log(res);
+      return res.json();
+      
     }).then((myJson) => {
       console.log(myJson);
+
+      return;
     })
 
 
