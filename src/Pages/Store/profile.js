@@ -33,15 +33,29 @@ class Profile extends Component{
   render(){
     return(
       <div className="container">
-        <h1>Profile</h1>
+        <h5>Store OnBoarding</h5>
         <div className="row">
     <form className="col s12">
       <div className="row">
         <div className="input-field col s12">
-          <textarea id="textarea1" className="materialize-textarea"></textarea>
-          <label htmlFor="textarea1">Textarea</label>
+          <textarea id="textarea1" className="materialize-textarea" data-length="120"></textarea>
+          <label htmlFor="textarea1">Tell us a bit about your store!</label>
         </div>
+
+
       </div>
+      <div className="row">
+      <div className="input-field col s12">
+  <select multiple>
+    <option value="" disabled selected>Choose your option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+  </select>
+  <label>Materialize Multiple Select</label>
+</div>
+      </div>
+
     </form>
   </div>
       </div>);
