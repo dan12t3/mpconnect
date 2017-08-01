@@ -11,6 +11,8 @@ import routes from './routes.js';
 import 'jquery/src/jquery';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.js';
+import './Pages/js/initialize.js';
+
 import './index.css';
 
 //var jQuery = require('jquery');

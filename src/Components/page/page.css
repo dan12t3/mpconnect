@@ -12,8 +12,8 @@
   and (orientation: portrait) {
 
     .accountView{
-      left:0;
-      top: var(--nav-height);
+      padding-left: 0;
+      padding-top: var(--nav-height);
     }
 
   }
