@@ -20,7 +20,7 @@ class Profile extends Component{
     fetch(config.backend+'/profile/fetch',options).then((res) => {
       console.log(res);
       return res.json();
-      
+
     }).then((myJson) => {
       console.log(myJson);
 
@@ -31,7 +31,20 @@ class Profile extends Component{
   }
 
   render(){
-    return(<p>Profile</p>);
+    return(
+      <div className="container">
+        <h1>Profile</h1>
+        <div className="row">
+    <form className="col s12">
+      <div className="row">
+        <div className="input-field col s12">
+          <textarea id="textarea1" className="materialize-textarea"></textarea>
+          <label htmlFor="textarea1">Textarea</label>
+        </div>
+      </div>
+    </form>
+  </div>
+      </div>);
   }
 }
 
