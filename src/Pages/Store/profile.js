@@ -14,11 +14,6 @@ import Awards from '../../Components/form/awards.js';
 
 class Profile extends Component{
 
-  componentWillMount(){
-    //fetch request to db
-
-
-  }
 
 
   render(){
