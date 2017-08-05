@@ -11,7 +11,7 @@ import Page from '../../Components/page/page';
 import Search from './search';
 import Messages from './messages';
 import Partners from './partners';
-import Profile from './profile';
+import Profile from '../../containers/store/profile';
 import Settings from './settings';
 
 
