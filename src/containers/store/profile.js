@@ -18,8 +18,7 @@ class Profile extends Component{
   render(){
     return(
       <div className="container">
-        <h5>Store OnBoarding</h5>
-        { console.log(this.props)}
+        <h5>{this.props.profile.title}</h5>
 
     <form className="col s12">
 
@@ -62,7 +61,7 @@ class Profile extends Component{
 function mapStateToProps(state) {
   console.log('state: ',state);
   return {
-    profile : state.hello
+    profile : state.store.profile
   };
 }
 

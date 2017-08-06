@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import '../../Components/variable.css';
 import { parse } from 'querystring';
 import Cookie from 'universal-cookie';
@@ -7,16 +9,18 @@ import Cookie from 'universal-cookie';
 import Navbar from '../../Components/navbar/navbar';
 import Page from '../../Components/page/page';
 
-
 import Search from './search';
 import Messages from './messages';
 import Partners from './partners';
 import Profile from '../../containers/store/profile';
 import Settings from './settings';
+import reducers from '../../reducers';
 
 
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 const App = ({ location }) => {
+
 
   const query = parse(location.search.substr(1));
   const cookie = new Cookie();
@@ -57,6 +61,7 @@ const App = ({ location }) => {
         <Route path='/store/settings' component={Settings} />
       </Switch>
     </Page>
+
     </div>
   );
 }

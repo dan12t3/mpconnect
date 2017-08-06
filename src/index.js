@@ -21,10 +21,13 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+
     <BrowserRouter>
-    {routes}
+      <Provider store={ createStoreWithMiddleware(reducers) }>
+      {routes}
+      </Provider>
     </BrowserRouter>
-  </Provider>
+
+
   , document.getElementById('root'));
 registerServiceWorker();

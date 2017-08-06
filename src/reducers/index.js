@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux';
 
-import Store from './Store';
+import store from './Store';
 
 const rootReducer = combineReducers({
-    store: Store,
-    hello: 'yoyo'
+    store
 });
 
 export default rootReducer;

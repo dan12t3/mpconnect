@@ -1,13 +1,11 @@
 import Profile from './profile';
 
-const store = () => {
-  return [
-    { profile : Profile },
-    { inbox : '' },
-    { partners: '' },
-    { search: '' },
-    { settings: '' }
-  ]
+const store = {
+  'profile' : Profile ,
+  'inbox' : { 'hello' : 'yolo' },
+  'partners': '' ,
+  'search': '' ,
+  'settings': ''
 }
 
-export default store;
+export default (state = store ) => state;
