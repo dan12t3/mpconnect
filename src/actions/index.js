@@ -1,3 +1,6 @@
 export function clickTitle(profile){
-  console.log("title:"+profile.title);
+  return {
+    type: 'CLICK_TITLE',
+    payload: profile.title
+  }
 }

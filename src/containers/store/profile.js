@@ -20,7 +20,7 @@ class Profile extends Component{
   render(){
     return(
       <div className="container">
-        <h5>{this.props.profile.title}</h5>
+        <h5 onClick={() => this.props.something(this.props.profile)}>{this.props.profile.title}</h5>
 
     <form className="col s12">
 
@@ -67,6 +67,10 @@ function mapStateToProps(state) {
   };
 }
 
+function mapDispatchToProps(dispatch){
+  return bindActionCreators( { something: clickTitle } ,dispatch);
+}
 
 
-export default connect(mapStateToProps)(Profile);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);
