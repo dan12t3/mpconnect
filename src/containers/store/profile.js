@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import Description from '../../Components/form/storedescription.js';
 import TargetAge from '../../Components/form/age.js';
@@ -7,6 +8,7 @@ import TargetSex from '../../Components/form/sex.js';
 import TargetLocation from '../../Components/form/location.js';
 import FulfillmentTime from '../../Components/form/fulfillment.js';
 import Awards from '../../Components/form/awards.js';
+import { clickTitle } from '../../actions';
 
 
 
